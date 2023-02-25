@@ -22,4 +22,30 @@ public static void main(String args[])
 #### public static void main (psvm) : It;s the first function that is being executed in Java.
 #### main : It represents the starting point of the program.
 #### String[] args : It is used for command line argument. Here the name of the String array is args but it is not fixed and user can use any name in place of it.
- 
+#### System.out.println : It is used to print the content written inside the bracket inside double quotes in the terminal or a console and then move the cursor to the next line because here we have use ```println```.
+## Now what happens if we change ```public static void main``` to ```public static int main```
+```
+public class LearnCoding
+{
+  public static int main(String args[])
+  {
+    System.out.println("Hello World");
+  }
+}
+```
+#### Here you will get an error - ```missing return statement``` because here you should be returning something as you have a function that should return an int value.
+## What if Let's say we ```return 0```
+#### Now the code looks like this ->
+```
+public class LearnCoding
+{
+  public static int main(String args[])
+  {
+    System.out.println("Hello World");
+    return 0;
+  }
+}
+```
+#### But even after returning 0 we still get this error ```Main method must return a value of type void in class LearnCoding, please define the main method as : public static void main(String[] args)```.
+#### So why is this happening?
+#### The C and C++ programs which return int from the main function are processes of Operating System. The int value returned from the main in C and C++ is exit code or exit status. The exit code of C and C++ program illustrates, why the program terminated. Exit code 0 means successfull termination. However, non zero exit status indicates error. Example -> exit code 1 depicts Miscellaneous errors, such as "divide by zero".
