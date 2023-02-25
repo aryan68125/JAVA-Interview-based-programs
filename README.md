@@ -52,4 +52,3 @@ public class LearnCoding
 #### Parent process of any child process keeps on waiting for the exit status of a child. And after recieving the exit status of child, cleans up the child process from the process table and frees the resources allocated to it. Which is why it becomes mandatory for C and C++ programs (which are processes of OS) to pass its exit status from main explicitly or implicitly.
 #### process table of an OS looks something like this ->
 <img src="/blob/master/util_images/process_table.png" alt="process_table">
-<img src="https://github.com/aryan68125/JAVA-Interview-based-programs/blob/master/util_images/process_table.png" alt="process_table">
