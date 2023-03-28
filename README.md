@@ -57,12 +57,18 @@ public class LearnCoding
 #### Recursion is a method where a function keeps calling itself until a base condition is met.
 #### Example sudo code of recursion : Here we are calculating the factorial of n ->
 ```
-factorial(int n)
-{
-  if n>1:
-      return n * factorial(n-1)
-  else
-      return 1        
-}
+ //recursive function that calls itself until a base condition is met here the base condition is 1 and it's calculating factorial.
+ static int fact(int n)
+ {
+   if (n>1)
+     {
+       return n*fact(n-1);
+     }
+   else
+   {
+      return 1 ;
+   }
+ }
+
 ```
-#### let's say ```factorial(int n)``` where ```n=5```. ```if 5>1 true``` then flow of function calling will be ```F[5] : 5 * F[4] --> F[4] : 4 * F[3] --> F[3] : 3 * F[2] --> F[2] : 2 * F[1] --> F[1] : 1```. Now after the base condition which is 1 here is met then flow of return will be ```F[1] : 1 --> F[2] : 2 * 1 = 2 --> F[3] : 3 * 2 = 6 --> F[4] : 4 * 6 = 24 --> F[5] : 5 * 24 = 120```. 
+#### let's say ```factorial(int n)``` where ```n=5```. ```if 5>1 true``` then flow of function calling will be ```F[5] : 5 * F[4] --> F[4] : 4 * F[3] --> F[3] : 3 * F[2] --> F[2] : 2 * F[1] --> F[1] : 1```. Now after the base condition which is 1 here is met then flow of return will be ```F[1] : 1 --> F[2] : 2 * 1 = 2 --> F[3] : 3 * 2 = 6 --> F[4] : 4 * 6 = 24 --> F[5] : 5 * 24 = 120```.
