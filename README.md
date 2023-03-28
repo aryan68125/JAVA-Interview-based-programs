@@ -52,3 +52,17 @@ public class LearnCoding
 #### Parent process of any child process keeps on waiting for the exit status of a child. And after recieving the exit status of child, cleans up the child process from the process table and frees the resources allocated to it. Which is why it becomes mandatory for C and C++ programs (which are processes of OS) to pass its exit status from main explicitly or implicitly.
 #### process table of an OS looks something like this ->
 ![](util_images/process_tables.png)
+
+## RECURSION
+#### Recursion is a method where a function keeps calling itself until a base condition is met.
+#### Example sudo code of recursion : Here we are calculating the factorial of n ->
+```
+factorial(int n)
+{
+  if n>1:
+      return n * factorial(n-1)
+  else
+      return 1        
+}
+```
+#### let's say ```factorial(int n)``` where ```n=5```. ```if 5>1 true``` then flow of function calling will be ```F[5] : 5 * F[4] --> F[4] : 4 * F[3] --> F[3] : 3 * F[2] --> F[2] : 2 * F[1] --> F[1] : 1```. Now after the base condition which is 1 here is met then flow of return will be ```F[1] : 1 --> F[2] : 2 * 1 = 2 --> F[3] : 3 * 2 = 6 --> F[4] : 4 * 6 = 24 --> F[5] : 5 * 24 = 120```. 
