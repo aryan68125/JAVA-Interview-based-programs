@@ -94,4 +94,20 @@ static long p(long x, long n)
 #### Calculate the power of number if the power is positive using recursion.
 ![](util_images/recursion/power_using_recursion.jpeg)
 ## Fibnocci series ->
+```
+static int fib(int n)
+{
+if (n==0)
+{
+  return 0;
+}
+if(n==1 || n==2)
+{
+  return 1;
+}
+return fib(n-1)+fib(n-2);
+}
+```
 #### Any position in a fibnocci series is nothing but the sum of the last two digits ``` F(n) = F(n-1) + F(n-2) ```. The first two digits will always be 0 and 1 ``` F(0) = 0 & F(1) = 1 ```
+#### A tree will form because of parallel recursion when calculating fibnocci numbers through recursion technique.
+![](util_images/recursion/flo_of_fibnocci_function_calling.jpeg)
