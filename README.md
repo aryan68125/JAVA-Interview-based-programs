@@ -111,3 +111,36 @@ return fib(n-1)+fib(n-2);
 #### Any position in a fibnocci series is nothing but the sum of the last two digits ``` F(n) = F(n-1) + F(n-2) ```. The first two digits will always be 0 and 1 ``` F(0) = 0 & F(1) = 1 ```
 #### A tree will form because of parallel recursion when calculating fibnocci numbers through recursion technique.
 ![](util_images/recursion/flo_of_fibnocci_function_calling.jpeg)
+## First occurance in array ->
+#### Let's say there is an array ``` A[3,5,7,2,4,5] ``` here we need to search for 5 in this array and print the first index of it i.e search for first occurance of 5 in the array. But before we do that let's clear out some basics.
+#### enter the array elements recursively
+```
+//Enter elements in the array recursively
+static void enterArray(int arr[],int i)
+{
+    if(i==arr.length)
+    {
+      return;
+    }
+    Scanner sc2 = new Scanner(System.in);
+    arr[i] = sc2.nextInt();
+    //i++ will not be accepted here it will cause the code to explode use i+1 instead
+    enterArray(arr,i+1);
+}
+```
+#### print the array elements recursively
+```
+//Print elements in the array recursively
+static void printArray(int arr[],int i)
+{
+    if(i==arr.length)
+    {
+      return;
+    }
+    System.out.println(arr[i]);
+    //i++ will not be accepted here it will cause the code to explode use i+1 instead
+    printArray(arr,i+1);
+ }
+```
+#### Tree representing the flow of function calling and dataflow
+![](util_images/recursion/recursive_array_print.png)
