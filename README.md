@@ -53,7 +53,7 @@ public class LearnCoding
 #### process table of an OS looks something like this ->
 ![](util_images/process_tables.png)
 
-## RECURSION
+## RECURSION :-
 #### Recursion is a method where a function keeps calling itself until a base condition is met.
 #### Example sudo code of recursion : Here we are calculating the factorial of n ->
 ```
@@ -76,6 +76,8 @@ public class LearnCoding
 ![](util_images/recursion/flow_of_recursion_program.jpeg)
 ![](util_images/recursion/recursion_and_PMI_one.jpg)
 ![](util_images/recursion/recursion_and_PMI_two.jpg)
-### Power using recursion
+### Power using recursion ->
 #### Calculate the power of number if the power is positive using recursion.
 ![](util_images/recursion/power_using_recursion.jpeg)
+### Fibnocci series ->
+#### Any position in a fibnocci series is nothing but the sum of the last two digits ``` F(n) = F(n-1) + F(n-2) ```. The first two digits will always be 0 and 1 ``` F(0) = 0 & F(1) = 1 ```
