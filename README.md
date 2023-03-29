@@ -73,3 +73,4 @@ public class LearnCoding
 ```
 #### let's say ```factorial(int n)``` where ```n=5```. ```if 5>1 true``` then flow of function calling will be ```F[5] : 5 * F[4] --> F[4] : 4 * F[3] --> F[3] : 3 * F[2] --> F[2] : 2 * F[1] --> F[1] : 1```. Now after the base condition which is 1 here is met then flow of return will be ```F[1] : 1 --> F[2] : 2 * 1 = 2 --> F[3] : 3 * 2 = 6 --> F[4] : 4 * 6 = 24 --> F[5] : 5 * 24 = 120```. If the base condition is met then the function calling stops and immidiately the immidiate values are followed up.
 ![](util_images/recursion/execution_stack.jpeg)
+![](util_images/recursion/flow_of_recursion_program.jpeg)
