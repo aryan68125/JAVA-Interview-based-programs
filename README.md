@@ -77,6 +77,20 @@ public class LearnCoding
 ![](util_images/recursion/recursion_and_PMI_one.jpg)
 ![](util_images/recursion/recursion_and_PMI_two.jpg)
 ## Power using recursion ->
+```
+// calculate the power of a number if the power is positive
+static long p(long x, long n)
+{
+  if (n!=0)
+  {
+    return x*p(x,n-1);
+  }
+  else
+  {
+    return 1;
+  }
+}
+```
 #### Calculate the power of number if the power is positive using recursion.
 ![](util_images/recursion/power_using_recursion.jpeg)
 ## Fibnocci series ->
