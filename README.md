@@ -76,3 +76,6 @@ public class LearnCoding
 ![](util_images/recursion/flow_of_recursion_program.jpeg)
 ![](util_images/recursion/recursion_and_PMI_one.jpg)
 ![](util_images/recursion/recursion_and_PMI_two.jpg)
+### Power using recursion
+#### Calculate the power of number if the power is positive using recursion.
+![](util_images/recursion/power_using_recursion.jpeg)
