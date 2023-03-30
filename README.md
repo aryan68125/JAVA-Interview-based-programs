@@ -228,3 +228,11 @@ static void smallest(int arr[],int i,long smallest)
   smallest(arr,i+1,smallest);
 }
 ```
+## Practice questions
+### Problem 1 - Figure out the pattern and solve it using a recursive function to achieve the above for any positive number n
+sample input 1----1
+sample output 1-----111
+sample input 2----2
+sample output 2----211121112
+sample input 2----3
+sample output 3----321112111232111211123
