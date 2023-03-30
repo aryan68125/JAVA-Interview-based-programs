@@ -111,7 +111,7 @@ return fib(n-1)+fib(n-2);
 #### Any position in a fibnocci series is nothing but the sum of the last two digits ``` F(n) = F(n-1) + F(n-2) ```. The first two digits will always be 0 and 1 ``` F(0) = 0 & F(1) = 1 ```
 #### A tree will form because of parallel recursion when calculating fibnocci numbers through recursion technique.
 ![](util_images/recursion/flo_of_fibnocci_function_calling.jpeg)
-## First occurance in array ->
+## First and Last occurance in array ->
 #### Let's say there is an array ``` A[3,5,7,2,4,5] ``` here we need to search for 5 in this array and print the first index of it i.e search for first occurance of 5 in the array. But before we do that let's clear out some basics.
 #### enter the array elements recursively
 ```
@@ -144,3 +144,87 @@ static void printArray(int arr[],int i)
 ```
 #### Tree representing the flow of function calling and dataflow
 ![](util_images/recursion/recursive_array_print.png)
+#### Printing array in reverse order
+```
+//Print elements in the array recursively in reverse order
+static void printArrayReverse(int arr[],int i)
+{
+    if(i==-1)
+    {
+      return;
+    }
+    System.out.print(arr[i] + " ");
+    //i++ will not be accepted here it will cause the code to explode use i+1 instead
+    printArrayReverse(arr,i-1);
+ }
+```
+#### First occurance -> It means the first appearance of an element in the array.
+```
+//printing the first occurance of the element in the array
+static void first_occurance_element(int arr[],int i,int num)
+{
+
+  if(i==arr.length)
+  {
+    return;
+  }
+  if (arr[i]==num)
+  {
+    System.out.println(arr[i] + " first occured in index "+i);
+    return;
+  }
+  //i++ will not be accepted here it will cause the code to explode use i+1 instead
+  first_occurance_element(arr,i+1,num);
+}
+```
+#### Last occurance -> It means the last appearance of an element in the array.
+```
+//printing the last occurance of the element in the array
+static void last_occurance_element(int arr[],int i,int num)
+{
+    if(i==-1)
+    {
+      return;
+    }
+    if (arr[i]==num)
+    {
+      System.out.println(arr[i] + " last occurance is in index "+i);
+      return;
+    }
+    //i++ will not be accepted here it will cause the code to explode use i+1 instead
+    last_occurance_element(arr,i-1,num);
+ }
+```
+## Largest and smallest number in the array through recursion
+```
+//finding the largest number in the array
+static void largest(int arr[],int i,int largest)
+{
+  if (i==arr.length)
+  {
+    System.out.println("Largest element in the array is = "+largest);
+    return;
+  }
+  if (arr[i]>largest)
+  {
+    largest = arr[i];
+  }
+  largest(arr,i+1,largest);
+}
+```
+```
+//finding the smallest element in the array
+static void smallest(int arr[],int i,long smallest)
+{
+  if (i==arr.length)
+  {
+    System.out.println("Smallest element in the array is = "+smallest);
+    return;
+  }
+  if(arr[i]<smallest)
+  {
+    smallest = arr[i];
+  }
+  smallest(arr,i+1,smallest);
+}
+```
