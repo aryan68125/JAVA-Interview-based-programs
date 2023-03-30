@@ -236,3 +236,16 @@ sample input 2----2
 sample output 2----211121112  
 sample input 2----3  
 sample output 3----321112111232111211123
+```
+//This recursive function will print the pattern
+public static void printpattern(int n){
+    if(n == 0){
+        return;
+    }
+    System.out.print(n + " ");
+    printpattern(n-1);
+    System.out.print(n + " ");
+    printpattern(n-1);
+    System.out.print(n + " ");
+}
+```
