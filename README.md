@@ -33,7 +33,7 @@ public class LearnCoding
   }
 }
 ```
-#### Here you will get an error - ```missing return statement``` because here you should be returning something as you have a function that should return an int value.
+Here you will get an error - ```missing return statement``` because here you should be returning something as you have a function that should return an int value.
 ## What if Let's say we ```return 0```
 #### Now the code looks like this ->
 ```
@@ -48,13 +48,13 @@ public class LearnCoding
 ```
 #### But even after returning 0 we still get this error ```Main method must return a value of type void in class LearnCoding, please define the main method as : public static void main(String[] args)```.
 #### So why is this happening?
-#### The C and C++ programs which return int from the main function are processes of Operating System. The int value returned from the main in C and C++ is exit code or exit status. The exit code of C and C++ program illustrates, why the program terminated. Exit code 0 means successfull termination. However, non zero exit status indicates error. Example -> exit code 1 depicts Miscellaneous errors, such as "divide by zero".
-#### Parent process of any child process keeps on waiting for the exit status of a child. And after recieving the exit status of child, cleans up the child process from the process table and frees the resources allocated to it. Which is why it becomes mandatory for C and C++ programs (which are processes of OS) to pass its exit status from main explicitly or implicitly.
+The C and C++ programs which return int from the main function are processes of Operating System. The int value returned from the main in C and C++ is exit code or exit status. The exit code of C and C++ program illustrates, why the program terminated. Exit code 0 means successfull termination. However, non zero exit status indicates error. Example -> exit code 1 depicts Miscellaneous errors, such as "divide by zero".
+Parent process of any child process keeps on waiting for the exit status of a child. And after recieving the exit status of child, cleans up the child process from the process table and frees the resources allocated to it. Which is why it becomes mandatory for C and C++ programs (which are processes of OS) to pass its exit status from main explicitly or implicitly.
 #### process table of an OS looks something like this ->
 ![](util_images/process_tables.png)
 
 # RECURSION :-
-#### Recursion is a method where a function keeps calling itself until a base condition is met.
+Recursion is a method where a function keeps calling itself until a base condition is met.
 #### Example sudo code of recursion : Here we are calculating the factorial of n ->
 ```
  //recursive function that calls itself until a base condition is met here the base condition is 1 and it's calculating factorial.
@@ -71,7 +71,7 @@ public class LearnCoding
  }
 
 ```
-#### let's say ```factorial(int n)``` where ```n=5```. ```if 5>1 true``` then flow of function calling will be ```F[5] : 5 * F[4] --> F[4] : 4 * F[3] --> F[3] : 3 * F[2] --> F[2] : 2 * F[1] --> F[1] : 1```. Now after the base condition which is 1 here is met then flow of return will be ```F[1] : 1 --> F[2] : 2 * 1 = 2 --> F[3] : 3 * 2 = 6 --> F[4] : 4 * 6 = 24 --> F[5] : 5 * 24 = 120```. If the base condition is met then the function calling stops and immidiately the immidiate values are followed up.
+let's say ```factorial(int n)``` where ```n=5```.  ```if 5>1 true``` then flow of function calling will be ```F[5] : 5 * F[4] --> F[4] : 4 * F[3] --> F[3] : 3 * F[2] --> F[2] : 2 * F[1] --> F[1] : 1```. Now after the base condition which is 1 here is met then flow of return will be ```F[1] : 1 --> F[2] : 2 * 1 = 2 --> F[3] : 3 * 2 = 6 --> F[4] : 4 * 6 = 24 --> F[5] : 5 * 24 = 120```. If the base condition is met then the function calling stops and immidiately the immidiate values are followed up.
 ![](util_images/recursion/execution_stack.jpeg)
 ![](util_images/recursion/flow_of_recursion_program.jpeg)
 ![](util_images/recursion/recursion_and_PMI_one.jpg)
@@ -108,11 +108,14 @@ if(n==1 || n==2)
 return fib(n-1)+fib(n-2);
 }
 ```
-#### Any position in a fibnocci series is nothing but the sum of the last two digits ``` F(n) = F(n-1) + F(n-2) ```. The first two digits will always be 0 and 1 ``` F(0) = 0 & F(1) = 1 ```
+Any position in a fibnocci series is nothing but the sum of the last two digits ``` F(n) = F(n-1) + F(n-2) ```.  
+The first two digits will always be 0 and 1 ``` F(0) = 0 & F(1) = 1 ```
 #### A tree will form because of parallel recursion when calculating fibnocci numbers through recursion technique.
 ![](util_images/recursion/flo_of_fibnocci_function_calling.jpeg)
 ## First and Last occurance in array ->
-#### Let's say there is an array ``` A[3,5,7,2,4,5] ``` here we need to search for 5 in this array and print the first index of it i.e search for first occurance of 5 in the array. But before we do that let's clear out some basics.
+Let's say there is an array ``` A[3,5,7,2,4,5] ``` here we need to search for 5 in  
+this array and print the first index of it i.e search for first occurance of 5 in  
+the array. But before we do that let's clear out some basics.
 #### enter the array elements recursively
 ```
 //Enter elements in the array recursively
