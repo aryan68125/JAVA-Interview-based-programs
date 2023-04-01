@@ -265,3 +265,29 @@ Points to remember
 * Average comparisions (n+1)/2
 ### Linear search algorithm outline
 ![](util_images/arrays/linear_search_algo.png)
+### Linear search through recursion
+```
+//This function will perform linear search on the array
+static void Linear_Search(int arr[], int i,int num)
+{
+  if(i==arr.length-1)
+  {
+    return;
+  }
+  if(arr[i]==num)
+  {
+    System.out.println("The number "+num+ " is in index "+i);
+  }
+  Linear_Search(arr,i+1,num);
+}
+```
+### Linear search through for loop
+```
+for(int i =0;i<arr.length;i++)
+{
+  if(arr[i]==num)
+  {
+    System.out.println(arr[i] + " is in index " + i);
+  }
+}
+```
