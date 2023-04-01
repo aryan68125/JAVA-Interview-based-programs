@@ -294,3 +294,41 @@ for(int i =0;i<arr.length;i++)
 ## Binary Search
 ![](util_images/arrays/binary_search_1.png)
 ![](util_images/arrays/binary_search_2.png)
+Points to remember
+* Time complexity O(log n)
+* Best case senario time complexity O(1) When the element to be searched is in First position.
+* Worst case time complexity O(log n) When the element to be searched is at the Last position.
+* Space complexity O(1) because the size of the array is not growing it is constant.
+#### Important NOTE : Binary search is only useful when the array is sorted either in ascending order or in descending order.
+### Binary search through recursion
+```
+//This function will perform binary search on the array
+/*
+This recusrion method of binary search will only work if the array is in
+the ascending order. I will not work if the array is in descending order.
+*/
+static int Binary_Search(int arr[],int left,int right,int num)
+{
+  int mid ;
+  if(right>=left)
+  {
+    mid = left + (right - left)/2;
+    if(arr[mid]==num)
+    {
+      return mid;
+    }
+    else if(num<arr[mid])
+    {
+      return Binary_Search(arr,left,mid-1,num);
+    }
+    else //if num>arr[mid]
+    {
+      return Binary_Search(arr,mid+1,right,num);
+    }
+  }
+  else //if the number is not found in the array
+  {
+    return -1;
+  }
+}
+```
