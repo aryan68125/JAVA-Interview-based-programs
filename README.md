@@ -291,3 +291,6 @@ for(int i =0;i<arr.length;i++)
   }
 }
 ```
+## Binary Search
+![](util_images/arrays/binary_search_1.png)
+![](util_images/arrays/binary_search_2.png)
