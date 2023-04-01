@@ -263,3 +263,5 @@ Points to remember
 * Worst case time complexity O(n) When the element to be searched is at the Last position.
 * Space complexity O(1) because the size of the array is not growing it is constant.
 * Average comparisions (n+1)/2
+### Linear search algorithm outline
+![](util_images/arrays/linear_search_algo.png)
