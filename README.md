@@ -255,3 +255,11 @@ public static void printpattern(int n){
     System.out.print(n + " ");
 }
 ```
+# Arrays :-
+## Linear search
+Points to remember  
+* Time complexity O(n) Because there is only 1 for loop.
+* Best case senario time complexity O(1) When the element to be searched is in First position.
+* Worst case time complexity O(n) When the element to be searched is at the Last position.
+* Space complexity O(1) because the size of the array is not growing it is constant.
+* Average comparisions (n+1)/2
