@@ -361,3 +361,13 @@ public static void binarySearchWhileLoop(int arr[],int left, int right, int num)
   }
 }
 ```
+## Bubble sort
+The reason why this algo is called bubble sort because it takes inspiration from a bubble formed in a cold drink.  
+The largest bubble formed at the bottom of the glass rises to the top towards the surface more wuickly than the smaller ones.  
+Bubble Sort is the elementary sorting algorithm for sorting various data structures. It is a comparison-based sorting algorithm in which each element is compared with the next element, and is swapped if those elements are not in the correct order.
+* The algorithm starts with comparing the first pair of elements.
+* If the first element is smaller than the second element, then the elements are swapped
+* This algorithm is not suitable for large data sets.  
+### bubble sort algorithm outline
+![](util_images/arrays/bubble_sort_1.png)
+![](util_images/arrays/bubble_sort_2.png)
