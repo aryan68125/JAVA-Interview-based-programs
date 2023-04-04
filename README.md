@@ -377,3 +377,4 @@ Algorithm for Bubble Sort in Java
 * Step3: if(arr[j]>arr[j+1]
 * Step4: swap(arr[j],arr[j+1])
 * Step5: End
+#### NOTE: Bubble sort is a swapping algorithm because at any point in time swapping between the elements happens.  
