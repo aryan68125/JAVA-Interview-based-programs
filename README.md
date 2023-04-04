@@ -525,3 +525,27 @@ Working of Insertion Sort
 Insertion sort algotrithm visualization with example :  
 ![](util_images/arrays/Insertion_sort_1.png)  
 ![](util_images/arrays/Insertion_sort_2.png)
+### Insertion sort using Loops
+```
+//insertion sort using loop
+static void insertionSortUsingLoop(int arr[])
+{
+    //insertion sort outer loop to drive the insertion sort
+    for(int i=1;i<arr.length;i++)
+    {
+      int temp = arr[i]; //backup the lement to be sorted
+      int j = i-1; //initialize the j variable to i-1
+      //insertion sort inner loop to drive the shifting of elements in the array
+      while(j>=0 && arr[j]>temp)
+      {
+        /*
+         Shifting the elements until jbecomes 0 or we find an element which is
+         less than the number (temp) which is being sorted here
+_          */
+        arr[j+1]=arr[j]; //shifting elements
+        j=j-1; //update j to keep driving the while loop
+      }
+      arr[j+1] = temp; //put the temp variable in a sorted fashion in the array
+    }
+}
+```

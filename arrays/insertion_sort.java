@@ -12,6 +12,28 @@ public class insertion_sort
     System.out.println("Printing the array");
     PrintArray(arr,0);
     System.out.println("\n");
+
+    //performing insertion sort
+    System.out.println("Press 1 : Perform Insertion sort using loop");
+    System.out.println("Press 2 : Perform Insertion sort using recursion");
+    int choice = sc.nextInt();
+    if(choice == 1)
+    {
+      //insertion sort using loop
+      System.out.println("Performing insertion sort using loop");
+      insertionSortUsingLoop(arr);
+      PrintArray(arr,0);
+      System.out.println("\n");
+    }
+    else if(choice == 2)
+    {
+      //insertion sort using recursion
+      System.out.println("Performing insertion sort using recursion");
+    }
+    else
+    {
+      System.out.println("Wrong choice");
+    }
   }
   //This function will enter the elements in the array
   static void EnterElementsInAttay(int arr[], int i)
@@ -33,5 +55,26 @@ public class insertion_sort
       }
       System.out.print(arr[i] + " ");
       PrintArray(arr,i+1);
+  }
+  //insertion sort using loop
+  static void insertionSortUsingLoop(int arr[])
+  {
+      //insertion sort outer loop to drive the insertion sort
+      for(int i=1;i<arr.length;i++)
+      {
+        int temp = arr[i]; //backup the lement to be sorted
+        int j = i-1; //initialize the j variable to i-1
+        //insertion sort inner loop to drive the shifting of elements in the array
+        while(j>=0 && arr[j]>temp)
+        {
+          /*
+           Shifting the elements until jbecomes 0 or we find an element which is
+           less than the number (temp) which is being sorted here
+_          */
+          arr[j+1]=arr[j]; //shifting elements
+          j=j-1; //update j to keep driving the while loop
+        }
+        arr[j+1] = temp; //put the temp variable in a sorted fashion in the array
+      }
   }
 }
