@@ -14,19 +14,41 @@ public class bubble_sort
     PrintArray(arr,0);
     System.out.println("\n");
 
-    //bubble sort using loop
-    System.out.println("Performing bubble sort using forloop on the array");
-    bubbleSortUsingLoop(arr);
-    //print array after bubble sort is complete
-    PrintArray(arr,0);
-    System.out.println("\n");
-
-    //bubblesort using loop optimized version
-    System.out.println("Performing bubble sort using forloop on the array (Optimized version)");
-    bubbleSortUsingLoopOptimized(arr);
-    //print array after bubble sort is complete
-    PrintArray(arr,0);
-    System.out.println("\n");
+    System.out.println("Press 1 : Perform bubble sort using forloop on the array");
+    System.out.println("Press 2 : Perform bubble sort using forloop on the array (Optimized version)");
+    System.out.println("Press 3 : Perform bubble sort using recursion on the array");
+    int choice = sc.nextInt();
+    if(choice ==1)
+    {
+      //bubble sort using loop
+      System.out.println("Performing bubble sort using forloop on the array");
+      bubbleSortUsingLoop(arr);
+      //print array after bubble sort is complete
+      PrintArray(arr,0);
+      System.out.println("\n");
+    }
+    else if(choice==2)
+    {
+      //bubblesort using loop optimized version
+      System.out.println("Performing bubble sort using forloop on the array (Optimized version)");
+      bubbleSortUsingLoopOptimized(arr);
+      //print array after bubble sort is complete
+      PrintArray(arr,0);
+      System.out.println("\n");
+    }
+    else if(choice==3)
+    {
+      //bubble sort using recursion
+       System.out.println("Performing bubble sort using recursion on the array");
+       bubbleSortUsingRecursion(arr, arr.length);
+       //print array after bubble sort is complete
+       PrintArray(arr,0);
+       System.out.println("\n");
+    }
+    else
+    {
+      System.out.println("Wrong choice");
+    }
   }
   //This function will enter the elements in the array
   static void EnterElementsInAttay(int arr[], int i)
@@ -130,4 +152,35 @@ public class bubble_sort
       }
     }
   }
+
+  //bubble sort using recursion
+    public static void bubbleSortUsingRecursion(int arr[],int n)
+    {
+           // Base case
+      if (n == 1)
+          return;
+
+       int count = 0;
+      // One pass of bubble sort. After
+      // this pass, the largest element
+      // is moved (or bubbled) to end.
+      for (int i=0; i<n-1; i++)
+          if (arr[i] > arr[i+1])
+          {
+              // swap arr[i], arr[i+1]
+              int temp = arr[i];
+              arr[i] = arr[i+1];
+              arr[i+1] = temp;
+                count = count+1;
+          }
+
+        // Check if any recursion happens or not
+        // If any recursion is not happen then return
+       if (count == 0)
+          return;
+
+       // Largest element is fixed,
+       // recur for remaining array
+       bubbleSortUsingRecursion(arr, n-1);
+    }
 }
