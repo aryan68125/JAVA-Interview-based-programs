@@ -332,3 +332,32 @@ static int Binary_Search(int arr[],int left,int right,int num)
   }
 }
 ```
+### Binary search using for loop
+```
+//binary search through while loop
+public static void binarySearchWhileLoop(int arr[],int left, int right, int num)
+{
+  int mid = (left+right)/2;
+  while(left<=right)
+  {
+    if(arr[mid]<num)
+    {
+      left = mid+1;
+    }
+    else if(arr[mid]>num)
+    {
+      right = mid-1;
+    }
+    else
+    {
+      System.out.println(arr[mid]+" is in index "+mid);
+      break;
+    }
+    mid = (left+right)/2;
+  }
+  if(left>right)
+  {
+    System.out.println("Element not found");
+  }
+}
+```

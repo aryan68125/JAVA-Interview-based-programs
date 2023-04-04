@@ -21,11 +21,15 @@ public class binary_search
     {
         System.out.println("The number "+arr[ans_binary_search]+" is in the index "+ ans_binary_search);
     }
+
+    //Binary search using for loop
+    System.out.println("Performing Binary search through while loop");
+    binarySearchWhileLoop(arr,0,arr.length-1,num);
   }
   //This function will enter the elements in the array
   static void EnterElementsInAttay(int arr[], int i)
   {
-    if(i==arr.length-1)
+    if(i==arr.length)
     {
       return;
     }
@@ -36,7 +40,7 @@ public class binary_search
   //This function will print the array
   static void PrintArray(int arr[],int i)
   {
-      if(i == arr.length-1)
+      if(i == arr.length)
       {
         return;
       }
@@ -51,7 +55,7 @@ public class binary_search
   static int Binary_Search(int arr[],int left,int right,int num)
   {
     int mid ;
-    if(right>=left)
+    if(left<=right)
     {
       mid = left + (right - left)/2;
       if(arr[mid]==num)
@@ -70,6 +74,32 @@ public class binary_search
     else //if the number is not found in the array
     {
       return -1;
+    }
+  }
+  //binary search through while loop
+  public static void binarySearchWhileLoop(int arr[],int left, int right, int num)
+  {
+    int mid = (left+right)/2;
+    while(left<=right)
+    {
+      if(arr[mid]<num)
+      {
+        left = mid+1;
+      }
+      else if(arr[mid]>num)
+      {
+        right = mid-1;
+      }
+      else
+      {
+        System.out.println(arr[mid]+" is in index "+mid);
+        break;
+      }
+      mid = (left+right)/2;
+    }
+    if(left>right)
+    {
+      System.out.println("Element not found");
     }
   }
 }
