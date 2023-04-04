@@ -577,3 +577,13 @@ static void insertionSortRecursive(int arr[], int n)
     arr[j+1] = last;
 }
 ```
+### Points to remember about insertion sort
+![](util_images/arrays/Insertion_sort_3.png)
+### Plus Points :
+* Easy to understand.
+* works efficiently on smaller datasets.
+* Uses no additional memory for sorting O(1) space complexity.
+* If data sets are already sorted or nearly sorted it has O(n) space complexity.
+### Negative points :
+* very bad time complexity of O(n^2)
+* Shifting items in the array in insertion sort method is costly.
