@@ -522,6 +522,6 @@ Working of Insertion Sort
 * Thus each time we insert element the sorted array becomes larger and unsorted becomes smaller, and the new element is to be compare with all the previous elements of the sorted array and adjust the element just next to its smaller element.
 * We repeat this process till all the elements in array become part of the sorted array.  
 
-Bubble sort algotrithm visualization with example :  
+Insertion sort algotrithm visualization with example :  
 ![](util_images/arrays/Insertion_sort_1.png)  
 ![](util_images/arrays/Insertion_sort_2.png)
