@@ -427,5 +427,5 @@ public static void bubbleSortUsingLoop(int arr[])
   }
 }
 ```  
-This program have O(n^2) in worst, average and best case senario.  
+This program have O(n^2) in worst, average and best case senario. This is because the loop for the passes will run from 0 to N irrespective wheather the array is entirely or partially sorted.   
 Now making some tweaks to the above program so that it gives us the O(n) in best case senario.
