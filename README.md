@@ -514,3 +514,10 @@ that the array elements are already sorted.
      bubbleSortUsingRecursion(arr, n-1);
   }
 ```
+## Insertion sort
+Working of Insertion Sort
+* Consider that there are 5 elements in an array which are to be sorted.
+* First, we consider the 0th index as sorted part and the rest is unsorted.
+* Then we compare the next element of the array with the first element of the array, if the first element is smaller then the second element then we swap the elements, otherwise we place the element after the first element
+* Thus each time we insert element the sorted array becomes larger and unsorted becomes smaller, and the new element is to be compare with all the previous elements of the sorted array and adjust the element just next to its smaller element.
+* We repeat this process till all the elements in array become part of the sorted array
