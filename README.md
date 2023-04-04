@@ -363,7 +363,7 @@ public static void binarySearchWhileLoop(int arr[],int left, int right, int num)
 ```
 ## Bubble sort
 The reason why this algo is called bubble sort because it takes inspiration from a bubble formed in a cold drink.  
-The largest bubble formed at the bottom of the glass rises to the top towards the surface more wuickly than the smaller ones.  
+The largest bubble formed at the bottom of the glass rises to the top towards the surface more quickly than the smaller ones.  
 Bubble Sort is the elementary sorting algorithm for sorting various data structures. It is a comparison-based sorting algorithm in which each element is compared with the next element, and is swapped if those elements are not in the correct order.
 * The algorithm starts with comparing the first pair of elements.
 * If the first element is smaller than the second element, then the elements are swapped
@@ -371,3 +371,9 @@ Bubble Sort is the elementary sorting algorithm for sorting various data structu
 ### bubble sort algorithm outline
 ![](util_images/arrays/bubble_sort_1.png)
 ![](util_images/arrays/bubble_sort_2.png)
+Algorithm for Bubble Sort in Java  
+* Step1: Repeat step 1 to 4 for i=0 to n
+* Step2: For j=0 to n
+* Step3: if(arr[j]>arr[j+1]
+* Step4: swap(arr[j],arr[j+1])
+* Step5: End
