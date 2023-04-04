@@ -390,3 +390,40 @@ Bubble sort algotrithm visualization with example :
 #### Cons :
 * Noob (Bad) algorithm
 * very horrible time complexity O(n^2)
+### Bubble sort using loops
+```
+//bubble sort using loop
+public static void bubbleSortUsingLoop(int arr[])
+{
+  /*
+  The reason why we are using arr.length-1 in the loop for passes because j+1
+  will go out of bounds if we would have run the loop for arr.length
+  */
+  for(int i =0;i<arr.length-1;i++) //loop for number of passes
+  {
+    /*
+     pass 1 : i=0 len=5
+              j< len - 0 -1 ; 5-0-1=4
+              j will run from 0 to 4 (number of iterations in each pass)
+     pass 2 : i=1 len=5
+              j< len - 1 -1 ; 5-1-1=3
+              j will run from 0 to 3 (number of iterations in each pass)
+     pass 2 : i=2 len=5
+              j< len - 2 -1 ; 5-2-1=2
+              j will run from 0 to 2 (number of iterations in each pass)
+    pass 2 : i=3 len=5
+             j< len - 3 -1 ; 5-3-1=1
+             j will run from 0 to 1 (number of iterations in each pass)
+    */
+    for(int j = 0;j<arr.length-i-1;j++) //loop for number of iterations
+    {
+      if(arr[j]>arr[j+1])
+      {
+        int temp = arr[j];
+        arr[j]=arr[j+1];
+        arr[j+1]=temp;
+      }
+    }
+  }
+}
+```
