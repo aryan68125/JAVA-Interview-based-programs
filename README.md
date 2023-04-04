@@ -429,3 +429,55 @@ public static void bubbleSortUsingLoop(int arr[])
 ```  
 This program have O(n^2) in worst, average and best case senario. This is because the loop for the passes will run from 0 to N irrespective wheather the array is entirely or partially sorted.   
 Now making some tweaks to the above program so that it gives us the O(n) in best case senario.
+```
+//bubble sort using loop optimized version
+public static void bubbleSortUsingLoopOptimized(int arr[])
+{
+  /*
+  The reason why we are using arr.length-1 in the loop for passes because j+1
+  will go out of bounds if we would have run the loop for arr.length
+  */
+  for(int i =0;i<arr.length-1;i++) //loop for number of passes
+  {
+    // for optimization when array is already sorted and no swapping happens
+    boolean swapped = false;
+    /*
+     pass 1 : i=0 len=5
+              j< len - 0 -1 ; 5-0-1=4
+              j will run from 0 to 4 (number of iterations in each pass)
+     pass 2 : i=1 len=5
+              j< len - 1 -1 ; 5-1-1=3
+              j will run from 0 to 3 (number of iterations in each pass)
+     pass 2 : i=2 len=5
+              j< len - 2 -1 ; 5-2-1=2
+              j will run from 0 to 2 (number of iterations in each pass)
+     pass 2 : i=3 len=5
+              j< len - 3 -1 ; 5-3-1=1
+              j will run from 0 to 1 (number of iterations in each pass)
+    */
+    for(int j = 0;j<arr.length-i-1;j++) //loop for number of iterations
+    {
+      if(arr[j]>arr[j+1])
+      {
+        int temp = arr[j];
+        arr[j]=arr[j+1];
+        arr[j+1]=temp;
+        swapped = true;
+      }
+    }
+    /*
+    This will stop the passes loop from progressing anyfurther if there is no
+    swapping happening in any iteration of a particular pass which would mean
+    that the array elements are already sorted.
+    */
+
+    if(swapped==false)
+    {
+      break;
+    }
+  }
+}
+```  
+Here we will stop the passes loop from progressing anyfurther if there is no
+swapping happening in any iteration of a particular pass which would mean
+that the array elements are already sorted.
