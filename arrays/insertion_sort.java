@@ -29,6 +29,9 @@ public class insertion_sort
     {
       //insertion sort using recursion
       System.out.println("Performing insertion sort using recursion");
+      insertionSortRecursive(arr,arr.length);
+      PrintArray(arr,0);
+      System.out.println("\n");
     }
     else
     {
@@ -77,4 +80,29 @@ _          */
         arr[j+1] = temp; //put the temp variable in a sorted fashion in the array
       }
   }
+    // insertion sort using recursion
+    static void insertionSortRecursive(int arr[], int n)
+    {
+        // Base case
+        if (n <= 1)
+            return;
+
+        // Sort first n-1 elements
+        insertionSortRecursive( arr, n-1 );
+
+        // Insert last element at its correct position
+        // in sorted array.
+        int last = arr[n-1];
+        int j = n-2;
+
+        /* Move elements of arr[0..i-1], that are
+          greater than key, to one position ahead
+          of their current position */
+        while (j >= 0 && arr[j] > last)
+        {
+            arr[j+1] = arr[j];
+            j--;
+        }
+        arr[j+1] = last;
+    }
 }
