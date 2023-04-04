@@ -384,8 +384,8 @@ Bubble sort algotrithm visualization with example :
 #### Pros:  
 * Easy to implement
 * Cool to implement
-* Gives largest value of the array in the first iteration itself.
-* Gives the smallest value of the array in the first iteration itself (with minor tweaks in the implementation).
+* Gives largest value of the array in the first pass itself.
+* Gives the smallest value of the array in the first pass itself (with minor tweaks in the implementation).
 * No demand for large amount of memory for operation.
 #### Cons :
 * Noob (Bad) algorithm
@@ -426,4 +426,6 @@ public static void bubbleSortUsingLoop(int arr[])
     }
   }
 }
-```
+```  
+This program have O(n^2) in worst, average and best case senario.  
+Now making some tweaks to the above program so that it gives us the O(n) in best case senario.
