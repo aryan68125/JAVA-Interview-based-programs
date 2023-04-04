@@ -13,6 +13,8 @@ public class linear_search
     System.out.println("Printing the array");
     PrintArray(arr,0);
     System.out.println("\n");
+
+    //linear search through recursion
     System.out.println("Enter the number to be searched in the array");
     int num = sc.nextInt();
     System.out.println("Performing linear search in the array through recursion");
