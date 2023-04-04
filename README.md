@@ -380,3 +380,13 @@ Algorithm for Bubble Sort in Java
 Bubble sort algotrithm visualization with example :  
 ![](util_images/arrays/bubble_sort_3.png)  
 #### NOTE: Bubble sort is a swapping algorithm because at any point in time swapping between the elements happens.  
+#### Pros and Cons of bubble sort
+#### Pros:  
+* Easy to implement
+* Cool to implement
+* Gives largest value of the array in the first iteration itself.
+* Gives the smallest value of the array in the first iteration itself (with minor tweaks in the implementation).
+* No demand for large amount of memory for operation.
+#### Cons :
+* Noob (Bad) algorithm
+* very horrible time complexity O(n^2)
