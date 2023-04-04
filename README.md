@@ -371,7 +371,7 @@ Bubble Sort is the elementary sorting algorithm for sorting various data structu
 ### bubble sort algorithm outline
 ![](util_images/arrays/bubble_sort_1.png)
 ![](util_images/arrays/bubble_sort_2.png)  
-Algorithm for Bubble Sort in Java  
+Algorithm for Bubble Sort in Java
 * Step1: Repeat step 1 to 4 for i=0 to n
 * Step2: For j=0 to n
 * Step3: if(arr[j]>arr[j+1]
