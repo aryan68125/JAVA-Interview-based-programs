@@ -411,9 +411,9 @@ public static void bubbleSortUsingLoop(int arr[])
      pass 2 : i=2 len=5
               j< len - 2 -1 ; 5-2-1=2
               j will run from 0 to 2 (number of iterations in each pass)
-    pass 2 : i=3 len=5
-             j< len - 3 -1 ; 5-3-1=1
-             j will run from 0 to 1 (number of iterations in each pass)
+     pass 2 : i=3 len=5
+              j< len - 3 -1 ; 5-3-1=1
+              j will run from 0 to 1 (number of iterations in each pass)
     */
     for(int j = 0;j<arr.length-i-1;j++) //loop for number of iterations
     {
