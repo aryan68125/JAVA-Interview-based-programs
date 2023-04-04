@@ -520,4 +520,8 @@ Working of Insertion Sort
 * First, we consider the 0th index as sorted part and the rest is unsorted.
 * Then we compare the next element of the array with the first element of the array, if the first element is smaller then the second element then we swap the elements, otherwise we place the element after the first element
 * Thus each time we insert element the sorted array becomes larger and unsorted becomes smaller, and the new element is to be compare with all the previous elements of the sorted array and adjust the element just next to its smaller element.
-* We repeat this process till all the elements in array become part of the sorted array
+* We repeat this process till all the elements in array become part of the sorted array.  
+
+Bubble sort algotrithm visualization with example :  
+![](util_images/arrays/Insertion_sort_1.png)  
+![](util_images/arrays/Insertion_sort_2.png)
