@@ -1,6 +1,5 @@
-// this program performs linear search on arrays
 import java.util.*;
-public class linear_search
+public class insertion_sort
 {
   public static void main(String args[])
   {
@@ -13,22 +12,6 @@ public class linear_search
     System.out.println("Printing the array");
     PrintArray(arr,0);
     System.out.println("\n");
-
-    //linear search through recursion
-    System.out.println("Enter the number to be searched in the array");
-    int num = sc.nextInt();
-    System.out.println("Performing linear search in the array through recursion");
-    Linear_Search(arr,0,num);
-
-    // linear search through for loop
-    System.out.println("Performing linear search through for loop");
-    for(int i =0;i<arr.length;i++)
-    {
-      if(arr[i]==num)
-      {
-        System.out.println(arr[i] + " is in index " + i);
-      }
-    }
   }
   //This function will enter the elements in the array
   static void EnterElementsInAttay(int arr[], int i)
@@ -50,18 +33,5 @@ public class linear_search
       }
       System.out.print(arr[i] + " ");
       PrintArray(arr,i+1);
-  }
-  //This function will perform linear search on the array
-  static void Linear_Search(int arr[], int i,int num)
-  {
-    if(i==arr.length)
-    {
-      return;
-    }
-    if(arr[i]==num)
-    {
-      System.out.println("The number "+num+ " is in index "+i);
-    }
-    Linear_Search(arr,i+1,num);
   }
 }
