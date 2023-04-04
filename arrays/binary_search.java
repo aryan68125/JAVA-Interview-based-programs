@@ -15,6 +15,8 @@ public class binary_search
     System.out.println("\n");
     System.out.println("Enter the number to be searched in the array");
     int num = sc.nextInt();
+
+    //Binary search using recursion
     System.out.println("Performing binary search in the array through recursion");
     int ans_binary_search = Binary_Search(arr,0,arr.length,num);
     if (ans_binary_search!=-1)
