@@ -603,3 +603,35 @@ Generally, pivot can be chosen as ny of the following -->
 ### Implementation of quick sort
 ![](util_images/arrays/quick_sort_1.png)
 ![](util_images/arrays/quick_sort_2.png)
+#### Code for the quick sort
+```
+//This function applies quick sort using recursion
+static void quick_sortUsingRecursion(int arr[], int low, int high) //handleing recursion
+{
+  if(low<high)
+  {
+    int indexPI = partition(arr,low,high);
+    quick_sortUsingRecursion(arr,low,indexPI-1);
+    quick_sortUsingRecursion(arr,indexPI+1,high);
+  }
+}
+static int partition(int arr[], int low,int high) //handleing quick sort logic
+{
+  int swapIndex = low-1;
+  int pivot = arr[high];
+  for(int j = low;j<high;j++)
+  {
+    if(arr[j]<pivot)
+    {
+      swapIndex++;
+      int temp=arr[j];
+      arr[j]=arr[swapIndex];
+      arr[swapIndex]=temp;
+    }
+  }
+  int temp2 = arr[swapIndex+1];
+  arr[swapIndex+1]= arr[high];
+  arr[high]= temp2;
+  return swapIndex+1;
+}
+```
