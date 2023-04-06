@@ -639,3 +639,9 @@ static int partition(int arr[], int low,int high) //handleing quick sort logic
 ![](util_images/arrays/quick_sort_3.png)
 Space Complexity is O(1) since we didn't need any extra array, since its in-place algorithm that is are all sorted within the original array itself.  
 The Auxiliary space complexity is O(log n) due to function call stack.
+#### Advantages of quick sort
+* This sorting algo is quick.
+* Reliable algorithm and used a lot in the industry.
+#### Disadvantages of quick sort
+* Very difficult to understand
+* If the first element is chosen as a pivot by some idiot then it causes worst-case complexity of O(n^2).
