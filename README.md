@@ -593,4 +593,13 @@ static void insertionSortRecursive(int arr[], int n)
 * Move the elements smaller to pivot in the left partition.
 * Move the elements greater than pivot to the right partition.
 * The partition index is discovered at the end.  
-The
+#### Now pivot is then chosen in each of the partition and the above steps are repeated until partition of one item each is reached.
+Generally, pivot can be chosen as ny of the following -->  
+1. Last element
+2. First element
+3. Random element
+4. Median element  
+#### Here we will choose the last element as a pivot
+### Implementation of quick sort
+![](util_images/arrays/quick_sort_1.png)
+![](util_images/arrays/quick_sort_2.png)
