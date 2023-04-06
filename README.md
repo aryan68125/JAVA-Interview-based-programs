@@ -637,3 +637,5 @@ static int partition(int arr[], int low,int high) //handleing quick sort logic
 ```
 ### Points to remember in quick sort
 ![](util_images/arrays/quick_sort_3.png)
+Space Complexity is O(1) since we didn't need any extra array, since its in-place algorithm that is are all sorted within the original array itself.  
+The Auxiliary space complexity is O(log n) due to function call stack.
