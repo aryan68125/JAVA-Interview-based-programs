@@ -635,3 +635,5 @@ static int partition(int arr[], int low,int high) //handleing quick sort logic
   return swapIndex+1;
 }
 ```
+### Points to remember in quick sort
+![](util_images/arrays/quick_sort_3.png)
