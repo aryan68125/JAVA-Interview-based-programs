@@ -587,3 +587,10 @@ static void insertionSortRecursive(int arr[], int n)
 ### Negative points :
 * very bad time complexity of O(n^2)
 * Shifting items in the array in insertion sort method is costly.
+## Quick Sort
+#### How the algorithm works?
+* Choose the pivot element.
+* Move the elements smaller to pivot in the left partition.
+* Move the elements greater than pivot to the right partition.
+* The partition index is discovered at the end.  
+The
