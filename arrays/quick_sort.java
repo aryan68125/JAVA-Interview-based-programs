@@ -67,12 +67,13 @@ public class quick_sort
   {
     if(low<high)
     {
-      int indexPI = partition(arr,low,high);
-      quick_sortUsingRecursion(arr,low,indexPI-1);
-      quick_sortUsingRecursion(arr,indexPI+1,high);
+      int indexPI = partition(arr,low,high); //partition the array logically
+      quick_sortUsingRecursion(arr,low,indexPI-1); //left partition
+      quick_sortUsingRecursion(arr,indexPI+1,high); // right partition
     }
   }
-  static int partition(int arr[], int low,int high) //handleing quick sort logic
+  static int partition(int arr[], int low,int high) //handleing quick sort logic partition logic and
+                                                    // sorting of elements
   {
     int swapIndex = low-1;
     int pivot = arr[high];
