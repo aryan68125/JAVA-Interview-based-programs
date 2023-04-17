@@ -255,6 +255,15 @@ public static void printpattern(int n){
     System.out.print(n + " ");
 }
 ```
+# Data Structure Time and Space complexities
+## Points to remember :
+#### Big O notation order
+* O(1) - Constant time
+* O(log n) - Logarithmic time
+* O(n) - Linear time
+* O(n log n) - quasilinear time
+* O(n²) - quadratic time
+![](util_images/arrays/Big_O_notation_order.png)
 # Arrays :-
 ## Linear search
 Points to remember  
@@ -369,7 +378,7 @@ Bubble Sort is the elementary sorting algorithm for sorting various data structu
 * If the first element is smaller than the second element, then the elements are swapped
 * This algorithm is not suitable for large data sets.  
 ### bubble sort algorithm outline
-#### NOTE : This complexities is only true when the bubble sort is optimized. If the Bubble sort algorithm is not optimized then the worst and best case senario time complexity will always be O(n^2). 
+#### NOTE : This complexities is only true when the bubble sort is optimized. If the Bubble sort algorithm is not optimized then the worst and best case senario time complexity will always be O(n^2).
 ![](util_images/arrays/bubble_sort_1.png)
 ![](util_images/arrays/bubble_sort_2.png)  
 Algorithm for Bubble Sort in Java
