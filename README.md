@@ -369,6 +369,7 @@ Bubble Sort is the elementary sorting algorithm for sorting various data structu
 * If the first element is smaller than the second element, then the elements are swapped
 * This algorithm is not suitable for large data sets.  
 ### bubble sort algorithm outline
+#### NOTE : This complexities is only true when the bubble sort is optimized. If the Bubble sort algorithm is not optimized then the worst and best case senario time complexity will always be O(n^2). 
 ![](util_images/arrays/bubble_sort_1.png)
 ![](util_images/arrays/bubble_sort_2.png)  
 Algorithm for Bubble Sort in Java
