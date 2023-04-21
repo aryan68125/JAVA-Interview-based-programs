@@ -154,7 +154,7 @@ public class bubble_sort
   }
 
   //bubble sort using recursion
-    public static void bubbleSortUsingRecursion(int arr[],int n)
+    public static void bubbleSortUsingRecursion(int arr[],int n) //n = arr.length
     {
            // Base case
       if (n == 1)
