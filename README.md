@@ -655,3 +655,9 @@ The Auxiliary space complexity is O(log n) due to function call stack.
 #### Disadvantages of quick sort
 * Very difficult to understand
 * If the first element is chosen as a pivot by some idiot then it causes worst-case complexity of O(n^2).
+## Selection Sort
+### Points to remember in Selection sort
+* Time Complexity : O(N^2)
+* Space Complexity : O(1)
+* Best Case, Worst Case, Avg Case : O(n^2)
+![](util_images/arrays/selection_sort.png) 
