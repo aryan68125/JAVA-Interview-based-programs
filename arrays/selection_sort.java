@@ -13,6 +13,10 @@ public class selection_sort
     PrintArray(arr,0,arr.length);
     System.out.println("");
     //selection sort
+    selectionSort(arr);
+    System.out.println("Printing the array after performing selection sort");
+    PrintArray(arr,0,arr.length);
+    System.out.println("");
   }
   static void EnterArray(int arr[],int i, int size)
   {
@@ -32,6 +36,26 @@ public class selection_sort
     }
     System.out.print(arr[i]+" ");
     PrintArray(arr,i+1,size);
+  }
+
+  //selection sort
+  static void selectionSort(int arr[])
+  {
+      for(int i=0;i<arr.length-1;i++)
+      {
+        int min_index = i;
+        for(int j = i+1; j<arr.length; j++)
+        {
+          if(arr[j]<arr[min_index])
+          {
+            min_index = j;
+          }
+        }
+        //swapping here
+        int temp = arr[min_index];
+        arr[min_index]=arr[i];
+        arr[i]=temp;
+      }
   }
 
 }

@@ -660,4 +660,26 @@ The Auxiliary space complexity is O(log n) due to function call stack.
 * Time Complexity : O(N^2)
 * Space Complexity : O(1)
 * Best Case, Worst Case, Avg Case : O(n^2)
-![](util_images/arrays/selection_sort.png) 
+![](util_images/arrays/selection_sort.png)
+#### Sample program of selection sort
+```
+//selection sort
+static void selectionSort(int arr[])
+{
+    for(int i=0;i<arr.length-1;i++)
+    {
+      int min_index = i;
+      for(int j = i+1; j<arr.length; j++)
+      {
+        if(arr[j]<arr[min_index])
+        {
+          min_index = j;
+        }
+      }
+      //swapping here
+      int temp = arr[min_index];
+      arr[min_index]=arr[i];
+      arr[i]=temp;
+    }
+}
+```
