@@ -683,3 +683,27 @@ static void selectionSort(int arr[])
     }
 }
 ```
+## Frequency of a number in an array (Optimized version)
+### Points to remember
+* This algorithm calculates the frequency of a number in an array
+* Time complexity : O(n log n) + O(n) = O(n logn)
+* Space complexity : O(1)
+* Here the array must be sorted in ascending order
+```
+static void CountFrequency(int arr[], int n)
+{
+     int i = 0;
+     while (i<n)
+     {
+       int  count = 1;
+
+     while (i<n-1 && arr[i]==arr[i+1])
+     {
+       i++;
+       count++;
+     }
+     System.out.println(arr[i] + " is present "+count+ " times in the array ");
+     i++;
+   }
+}
+```

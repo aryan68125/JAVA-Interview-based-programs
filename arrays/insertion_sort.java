@@ -81,7 +81,7 @@ _          */
       }
   }
     // insertion sort using recursion
-    static void insertionSortRecursive(int arr[], int n)
+    static void insertionSortRecursive(int arr[], int n) //arr.length = n
     {
         // Base case
         if (n <= 1)
