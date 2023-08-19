@@ -278,6 +278,21 @@ public static void printpattern(int n){
 * Logical operation takes 1 unit of time.
 * Other smal/single operations takes 1 unit of time.
 * Drop lower order terms and constants--> ``` T = n^2+3n+1 --> O(n^2) ```
+* Drop constant multipliers
+#### Calculate the Time complexitiy of Constant algorithm
+#### Question 1 :
+```
+public int sum(int x , int y){
+int result = x+y;
+return result;
+}
+```
+| Line no. | Operations    | Unit Time     |
+| -------- | ------------- | ------------- |
+| 2.       | 1+1+1+1       | 4             |
+| 3.       | 1+1           | 2             | <br />
+Total time taken (T)=> 4+2 = 6 <br />
+T~C(Constant amout of time) <br />
 #### Big O notation order
 * O(1) - Constant time
 * O(log n) - Logarithmic time
