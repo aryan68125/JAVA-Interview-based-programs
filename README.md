@@ -325,12 +325,14 @@ Now we focus on ``` i++ ``` part of the for loop. For int n ``` i++ ``` will exe
 So our operations for the for loop becomes ``` 1+3(n+1)+3n ```. On solving the equation becomes ``` 1+3n+3+3n --> 4+6n ~ is the total unit of time it will take```
 
 <br />
+
 | Line no. | Operations    | Unit Time     |
 | -------- | ------------- | ------------- |
 | 2.       | 1             | 1             |
 | 3.       | 1+3(n+1)+3n   | 4+6n          |
 | 4.       | n(1+1+1+1)    | 4n            |
 | 6.       | 1+1           | 2             |
+
 <br />
 
 Total time (T) = 1+4+6n+4n+2 --> 7+10n --> O(n) is the time complexity of the given algorithm.
