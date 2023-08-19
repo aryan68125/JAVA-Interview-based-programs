@@ -322,7 +322,7 @@ public void findsum(int n){
 The for loop ``` for(int i=1;i<=n;i++) ``` will get executed n+1 times and each time the for loop executes it will perform three operations. <br />
 So the total number of operations in line 3 for this for loop will be ``` 1+3(n+1) ``` <br />
 Now we focus on ``` i++ ``` part of the for loop. For int n ``` i++ ``` will execute n number of times and each time it executes it performs 3 operations. <br/>
-So our operations for the for loop becomes ``` 1+3(n+1)+3n ```. On solving the equation becomes ``` 1+3n+3+3n --> 4+6n ~ is the total unit of time it will take```
+So our operations for the for loop becomes ``` 1+3(n+1)+3n ```. On solving the equation becomes <br /> ``` 1+3n+3+3n --> 4+6n ~ is the total unit of time it will take```
 
 <br />
 
