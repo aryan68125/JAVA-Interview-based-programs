@@ -384,6 +384,12 @@ The graph when we plot the polynomial algorithm : <br />
 * An array is a collection of adjacent and contigious elements of the same type.
 * The size of an array is fixed and cannot be modified.
 * Being adjacent each partition is indexed and can be determined by its position.
+* index starts at 0 and ends at length-1.
+
+### Declaring an array
+* One dimensional array can be declared ``` dataType arrayName[]; ``` OR ``` dataType[] arrayName; ```
+### Initializing an array
+* It gives memory to array elements. One dimensional array can be initialized via syntax :-> ``` arrayName = new dataType[size]; ```
 
 ## Linear search
 Points to remember  
