@@ -378,7 +378,13 @@ The graph when we plot the polynomial algorithm : <br />
 * O(n log n) - quasilinear time
 * O(n²) - quadratic time
 ![](util_images/arrays/Big_O_notation_order.png)
+
 # Arrays :-
+### What is an Array?
+* An array is a collection of adjacent and contigious elements of the same type.
+* The size of an array is fixed and cannot be modified.
+* Being adjacent each partition is indexed and can be determined by its position.
+
 ## Linear search
 Points to remember  
 * Time complexity O(n) Because there is only 1 for loop.
