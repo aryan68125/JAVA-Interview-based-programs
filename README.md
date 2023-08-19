@@ -257,6 +257,13 @@ public static void printpattern(int n){
 ```
 # Data Structure Time and Space complexities
 ## Points to remember :
+#### Omega Notation
+* It is the formal way to express the lower bound of an algorithm's running time.
+* Lower bound means for any given input this notation determines best amount of running time an algorithm can take to complete.
+* This helps us determine what is the minimum amount of resources we need to run a particular algorithm.
+#### Big O notation
+* This is the formal way to express the upper bound of an algorithm's running time.
+* Upper bound means for any given input this notation determine's longest amount of time an algorithm can take to complete.
 #### Big O notation order
 * O(1) - Constant time
 * O(log n) - Logarithmic time
