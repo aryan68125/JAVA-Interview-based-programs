@@ -335,7 +335,9 @@ So our operations for the for loop becomes ``` 1+3(n+1)+3n ```. On solving the e
 
 <br />
 
-Total time (T) = 1+4+6n+4n+2 --> 7+10n --> O(n) is the time complexity of the given algorithm.
+Total time (T) = 1+4+6n+4n+2 --> 7+10n --> O(n) is the time complexity of the given algorithm. <br />
+The graph below shows how the linear algorithm is plotted on the graph :
+![](util_images/arrays/graph_of_big_o_notation_linear_alogithm.png)
 
 #### Big O notation order
 * O(1) - Constant time
