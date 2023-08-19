@@ -291,6 +291,7 @@ return result;
 | -------- | ------------- | ------------- |
 | 2.       | 1+1+1+1       | 4             |
 | 3.       | 1+1           | 2             | <br />
+<br />
 Total time taken (T)=> 4+2 = 6 <br />
 T~C(Constant amout of time) <br />
 #### Big O notation order
