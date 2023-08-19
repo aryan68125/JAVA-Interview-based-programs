@@ -257,6 +257,9 @@ public static void printpattern(int n){
 ```
 # Data Structure Time and Space complexities
 ## Points to remember :
+#### Big Theta notation
+* It expresses both the upper bound and lower bound of an algorithm's running time.
+* By lower bound and Upper bound means for any given input this notation determines average amount of time an algorithm can take to complete.
 #### Omega Notation
 * It is the formal way to express the lower bound of an algorithm's running time.
 * Lower bound means for any given input this notation determines best amount of running time an algorithm can take to complete.
@@ -264,6 +267,7 @@ public static void printpattern(int n){
 #### Big O notation
 * This is the formal way to express the upper bound of an algorithm's running time.
 * Upper bound means for any given input this notation determine's longest amount of time an algorithm can take to complete.
+* Big O notation provides us with the worst case analysis of an algorithm.
 #### Big O notation order
 * O(1) - Constant time
 * O(log n) - Logarithmic time
