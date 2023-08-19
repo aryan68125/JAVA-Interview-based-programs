@@ -257,6 +257,7 @@ public static void printpattern(int n){
 ```
 # Data Structure Time and Space complexities
 ## Points to remember :
+## The three Asymptotic notations : 
 #### Big Theta notation
 * It expresses both the upper bound and lower bound of an algorithm's running time.
 * By lower bound and Upper bound means for any given input this notation determines average amount of time an algorithm can take to complete.
