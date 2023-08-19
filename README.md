@@ -390,6 +390,12 @@ The graph when we plot the polynomial algorithm : <br />
 * One dimensional array can be declared ``` dataType arrayName[]; ``` OR ``` dataType[] arrayName; ```
 ### Initializing an array
 * It gives memory to array elements. One dimensional array can be initialized via syntax :-> ``` arrayName = new dataType[size]; ```
+* The size can be entered in run time via scanner class : <br />
+```
+Scanner sc = new Scanner(System.in);
+int size = sc.nextInt();
+int array[] = new int[size];
+```
 
 ## Linear search
 Points to remember  
