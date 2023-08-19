@@ -269,6 +269,15 @@ public static void printpattern(int n){
 * This is the formal way to express the upper bound of an algorithm's running time.
 * Upper bound means for any given input this notation determine's longest amount of time an algorithm can take to complete.
 * Big O notation provides us with the worst case analysis of an algorithm.
+#### Rules of Big(O) Notation
+* Assume the machine on which your algorithm is running is a single processor machine.
+* Assume that the processor executes the instruction sequentially.
+* Assume the assignment operation takes 1 unit of time. ```x = 5 --> 1 unit of time;```
+* Assume the return statement takes 1 unit of time . ```return 5 --> 1 unit of time;```
+* Assume the arithematic operation takes 1 unit of time. ```sum = a + b --> 1 unit of time;```
+* Logical operation takes 1 unit of time.
+* Other smal/single operations takes 1 unit of time.
+* Drop lower order terms and constants--> ``` T = n^2+3n+1 --> O(n^2) ```
 #### Big O notation order
 * O(1) - Constant time
 * O(log n) - Logarithmic time
