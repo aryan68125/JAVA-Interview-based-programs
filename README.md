@@ -339,6 +339,38 @@ Total time (T) = 1+4+6n+4n+2 --> 7+10n --> O(n) is the time complexity of the gi
 The graph below shows how the linear algorithm is plotted on the graph : <br />
 ![](util_images/arrays/graph_of_big_o_notation_linear_alogithm.png)
 
+#### Calculate the Time complexitiy of Polynomial algorithm
+#### Question 1
+```
+public void print(int n){
+    for(int i =1; i<=num;i++)
+    {
+       for(int j=1;j<=n;j++){
+           System.out.println("i= "+i+ " j= " +j);
+       }
+       System.out.println("End of inner for loop");
+    }
+    System.out.println("Outer for loop end");
+}
+```
+<br />
+
+| Line no. | Operations     | Unit Time          |
+| -------- | -------------- | ------------------ |
+| 2.       | 1+3(n+1)+3n    | 4+6n               |
+| 3.       | (1+3(n+1)+3n)n | (4+6n)n -> 4n+6n^2 |
+| 4.       | n^2(1+1+1)     | 3n^2               |
+| 6.       | n(1)           | n                  |
+| 8.       | 1              | 1                  |
+
+<br />
+
+The total time complexity (T) = 4+6n+4n+6n^2+3n^2+n+1 <br />
+5+11n+9n^2 --> O(n^2) <br />
+
+The graph when we plot the polynomial algorithm : <br />
+![](util_images/arrays/graph_of_big_o_notation_polynomial_alogithm.png)
+
 #### Big O notation order
 * O(1) - Constant time
 * O(log n) - Logarithmic time
