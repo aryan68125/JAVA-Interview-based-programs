@@ -295,6 +295,16 @@ return result;
 Total time taken (T)=> 4+2 = 6 <br />
 T~C(Constant amout of time) <br />
 
+#### Question 2
+```
+public int get(int[]arr, int i){
+  return arr[i];
+  }
+```
+Time complexicity of the algorithm which have constant time as O(1) <br />
+The graph below shows the constant time of O(1) <br />
+![](util_images/arrays/graph_of_big_O_of_1.png)
+
 #### Big O notation order
 * O(1) - Constant time
 * O(log n) - Logarithmic time
