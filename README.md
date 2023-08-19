@@ -294,6 +294,7 @@ return result;
 <br />
 Total time taken (T)=> 4+2 = 6 <br />
 T~C(Constant amout of time) <br />
+
 #### Big O notation order
 * O(1) - Constant time
 * O(log n) - Logarithmic time
