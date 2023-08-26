@@ -508,6 +508,45 @@ static void Linear_Search(int arr[], int i,int num)
   Linear_Search(arr,i+1,num);
 }
 ```
+Another method to do Linear search through recursion
+```
+static int LinearSearch(int arr[], int i, int key){
+  if(i == arr.length){
+    return -1;
+  }
+  if(arr[i] == key){
+    return i;
+  }
+  return LinearSearch(arr,i+1,key);
+}
+```
+Main function that drives the linear search function
+```
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter the size of the array");
+  int size = sc.nextInt();
+  int arr[]=new int[size];
+
+  System.out.println("Enter the elements in the array");
+  EnterElements(arr,0);
+
+  System.out.println("Printing the array elements of the array");
+  DisplayArray(arr,0);
+  System.out.println(" ");
+
+  System.out.println("Performing Linear search on the array");
+  System.out.println("Enter the number that you want to search in the array");
+  int key =sc.nextInt();
+  int index = LinearSearch(arr,0, key);
+  if(index != -1){
+    System.out.println("The number "+arr[index]+" is in position "+index+" in the array");
+  }
+  else{
+    System.out.println("The number "+key+" is not present in the array");
+  }
+}
+```
 ### Linear search through for loop
 ```
 for(int i =0;i<arr.length;i++)
@@ -529,33 +568,59 @@ Points to remember
 #### Important NOTE : Binary search is only useful when the array is sorted either in ascending order or in descending order.
 ### Binary search through recursion
 ```
-//This function will perform binary search on the array
-/*
-This recusrion method of binary search will only work if the array is in
-the ascending order. I will not work if the array is in descending order.
-*/
-static int Binary_Search(int arr[],int left,int right,int num)
-{
-  int mid ;
-  if(right>=left)
-  {
-    mid = left + (right - left)/2;
-    if(arr[mid]==num)
-    {
+static int BinarySearch(int arr[], int left, int right, int key){
+  int mid;
+  if(left<right){
+    mid = (left+right)/2;
+    if(key<arr[mid]){
+      return BinarySearch(arr,left,mid-1,key);
+    }
+    else if(key>arr[mid]){
+      return BinarySearch(arr,mid+1,right,key);
+    }
+    else if(key == arr[mid]){
       return mid;
     }
-    else if(num<arr[mid])
-    {
-      return Binary_Search(arr,left,mid-1,num);
-    }
-    else //if num>arr[mid]
-    {
-      return Binary_Search(arr,mid+1,right,num);
+    else{
+      return -1;
     }
   }
-  else //if the number is not found in the array
-  {
+  else{
     return -1;
+  }
+}
+```
+Main function that drives the binary search function
+```
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter the size of the array");
+  int size = sc.nextInt();
+  int arr[] = new int[size];
+
+  System.out.println("Enter the elements in the array");
+  EnterElements(arr,0);
+
+  System.out.println("Displaying the array");
+  DisplayArray(arr,0);
+  System.out.println(" ");
+
+  System.out.println("Performing bubbleSort on the array");
+  BubbleSort(arr,arr.length);
+
+  System.out.println("Displaying the array after the bubble sort operation");
+  DisplayArray(arr,0);
+  System.out.println(" ");
+
+  System.out.println("Performing Binary Search on the array");
+  System.out.println("Enter the number that you want to search in the array");
+  int key = sc.nextInt();
+  int index = BinarySearch(arr,0,arr.length,key);
+  if(index!=-1){
+    System.out.println("The number "+arr[index]+" is in position "+index+" in the array");
+  }
+  else{
+    System.out.println("The number "+key+" is not present in the array");
   }
 }
 ```
@@ -879,7 +944,7 @@ The Auxiliary space complexity is O(log n) due to function call stack.
 * Space Complexity : O(1)
 * Best Case, Worst Case, Avg Case : O(n^2)
 ![](util_images/arrays/selection_sort.png)
-#### Sample program of selection sort
+#### Sample program of selection sort through for loop
 ```
 //selection sort
 static void selectionSort(int arr[])
@@ -899,6 +964,26 @@ static void selectionSort(int arr[])
       arr[min_index]=arr[i];
       arr[i]=temp;
     }
+}
+```
+#### Selection sort through recursion
+```
+static void RecursiveSelectionSort(int arr[], int i){
+  if(i == arr.length-1){
+    return;
+  }
+  int min_index=i;
+  for(int j=i+1;j<arr.length;j++){
+    if(arr[j]<arr[min_index]){
+      min_index=j;
+    }
+  }
+  if(i!=min_index){
+    int temp = arr[min_index];
+    arr[min_index]=arr[i];
+    arr[i]=temp;
+  }
+  RecursiveSelectionSort(arr,i+1);
 }
 ```
 ## Frequency of a number in an array (Optimized version)
