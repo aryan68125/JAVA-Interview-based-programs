@@ -396,7 +396,54 @@ Scanner sc = new Scanner(System.in);
 int size = sc.nextInt();
 int array[] = new int[size];
 ```
+## Delete the even numbers from the array
+Here is the sample code to delete the even numbers from the array ->
+#### The function that performs the delete operations of all the even numbers from the array 
+```
+static int[] DeleteEvenNumbers(int arr[],int brr[]){
+  //counting the odd numbers in the original array
+  int oddCount=0;
+  for(int i = 0; i <arr.length;i++){
+    if(arr[i]%2 != 0){
+      oddCount++;
+    }
+  }
+  brr = new int [oddCount];
+  int k=0;
+  for(int i=0;i<arr.length;i++){
+    if(arr[i]%2!=0){
+      brr[k] = arr[i];
+      k++;
+    }
+  }
+  return brr;
+}
+```
+#### The main function that drives the above function
+```
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter the size of the array");
+  int size = sc.nextInt();
+  int arr[] = new int[size];
+  int brr[]={0};
 
+  System.out.println("Enter the elements in the array");
+  EnterElements(arr,0);
+
+  System.out.println("Displaying the array");
+  DisplayArray(arr,0);
+  System.out.println(" ");
+
+  System.out.println("Deleting the even numbers from the array");
+  int resultarr[] = DeleteEvenNumbers(arr,brr);
+  System.out.println("The new array --> ");
+  for(int i=0;i<resultarr.length;i++){
+    System.out.print(resultarr[i]+ " ");
+  }
+  System.out.println(" ");
+}
+```
 ## Linear search
 Points to remember  
 * Time complexity O(n) Because there is only 1 for loop.
