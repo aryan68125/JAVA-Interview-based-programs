@@ -444,6 +444,45 @@ public static void main(String args[]){
   System.out.println(" ");
 }
 ```
+## Reverse the array
+Here we have to write a program to reverse the positioning of array elements in the array.
+#### Function to perform the reversal of the array
+```
+static void ReverseArray(int arr[]){
+  int k=arr.length-1;
+  for(int i=0;i<arr.length;i++){
+    if(k>i){
+      int temp = arr[i];
+      arr[i] = arr[k];
+      arr[k] = temp;
+      k--;
+    }
+  }
+}
+```
+#### main function that drives the reverse array function
+```
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter the size of the array");
+  int size = sc.nextInt();
+  int arr[] = new int[size];
+
+  System.out.println("Enter the elements in the array");
+  EnterElements(arr,0);
+
+  System.out.println("Printing the elements of the array");
+  DisplayArray(arr,0);
+  System.out.println(" ");
+
+  System.out.println("Reversing the array");
+  ReverseArray(arr);
+
+  System.out.println("Printing the array after reversing it ");
+  DisplayArray(arr,0);
+  System.out.println(" ");
+}
+```
 ## Linear search
 Points to remember  
 * Time complexity O(n) Because there is only 1 for loop.
