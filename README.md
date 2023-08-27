@@ -705,38 +705,17 @@ static int BinarySearch(int arr[], int left, int right, int key){
   }
 }
 ```
-Main function that drives the binary search function
+The inside the Main function that drives the binary search function
 ```
-public static void main(String args[]){
-  Scanner sc = new Scanner(System.in);
-  System.out.println("Enter the size of the array");
-  int size = sc.nextInt();
-  int arr[] = new int[size];
-
-  System.out.println("Enter the elements in the array");
-  EnterElements(arr,0);
-
-  System.out.println("Displaying the array");
-  DisplayArray(arr,0);
-  System.out.println(" ");
-
-  System.out.println("Performing bubbleSort on the array");
-  BubbleSort(arr,arr.length);
-
-  System.out.println("Displaying the array after the bubble sort operation");
-  DisplayArray(arr,0);
-  System.out.println(" ");
-
-  System.out.println("Performing Binary Search on the array");
-  System.out.println("Enter the number that you want to search in the array");
-  int key = sc.nextInt();
-  int index = BinarySearch(arr,0,arr.length,key);
-  if(index!=-1){
-    System.out.println("The number "+arr[index]+" is in position "+index+" in the array");
-  }
-  else{
-    System.out.println("The number "+key+" is not present in the array");
-  }
+System.out.println("Performing Binary Search on the array");
+System.out.println("Enter the number that you want to search in the array");
+int key = sc.nextInt();
+int index = BinarySearch(arr,0,arr.length-1,key);
+if(index!=-1){
+  System.out.println("The number "+arr[index]+" is in position "+index+" in the array");
+}
+else{
+  System.out.println("The number "+key+" is not present in the array");
 }
 ```
 ### Binary search using for loop

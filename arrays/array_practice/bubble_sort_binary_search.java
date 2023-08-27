@@ -35,7 +35,7 @@ public class bubble_sort_binary_search {
     }
     static int BinarySearch(int arr[], int left, int right, int key){
         int mid;
-        if(left<right){
+        if(left<=right){
             mid = (left+right)/2;
             if(key<arr[mid]){
                 return BinarySearch(arr,left,mid-1,key);
@@ -77,7 +77,7 @@ public class bubble_sort_binary_search {
         System.out.println("Performing Binary Search on the array");
         System.out.println("Enter the number that you want to search in the array");
         int key = sc.nextInt();
-        int index = BinarySearch(arr,0,arr.length,key);
+        int index = BinarySearch(arr,0,arr.length-1,key);
         if(index!=-1){
             System.out.println("The number "+arr[index]+" is in position "+index+" in the array");
         }
