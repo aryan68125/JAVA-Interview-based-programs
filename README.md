@@ -396,6 +396,27 @@ Scanner sc = new Scanner(System.in);
 int size = sc.nextInt();
 int array[] = new int[size];
 ```
+## How to enter elements in the array using recursion
+```
+static void EnterElements(int arr[], int i){
+  if(i == arr.length){
+    return;
+  }
+  Scanner sc  = new Scanner(System.in);
+  arr[i] = sc.nextInt();
+  EnterElements(arr,i+1);
+}
+```
+## How to display elements of the array using recursion
+```
+static void DisplayArray(int arr[], int i){
+  if(i == arr.length){
+    return;
+  }
+  System.out.print(arr[i]+" ");
+  DisplayArray(arr,i+1);
+}
+```
 ## Delete the even numbers from the array
 Here is the sample code to delete the even numbers from the array ->
 #### The function that performs the delete operations of all the even numbers from the array 
@@ -481,6 +502,54 @@ public static void main(String args[]){
   System.out.println("Printing the array after reversing it ");
   DisplayArray(arr,0);
   System.out.println(" ");
+}
+```
+## Find Largest number in the array
+Function that finds the largest element in the array via array traversal <br />
+
+```
+static int FindMax(int arr[]){
+  int max = arr[0];
+  for(int i=0 ; i<arr.length;i++){
+    if(max<arr[i]){
+      max= arr[i];
+    }
+  }
+  return max;
+}
+```
+<br />
+The main function that drives the function <br />
+
+```
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter the size of the array");
+  int size = sc.nextInt();
+  int arr[] = new int[size];
+
+  System.out.println("Enter the elements in the array");
+  EnterElements(arr,0);
+
+  System.out.println("Display the array elements");
+  DisplayArray(arr,0);
+  System.out.println(" ");
+
+  System.out.println("finding the largest value in the array using for loop");
+  int max = FindMax(arr);
+  System.out.println("The largest number in the array is = "+max);
+}
+```
+## find minimum number in the array
+```
+static int FindMini(int arr[]){
+  int mini = arr[0];
+  for(int i=0;i<arr.length;i++){
+    if(arr[i]<mini){
+      mini = arr[i];
+    }
+  }
+  return mini;
 }
 ```
 ## Linear search
