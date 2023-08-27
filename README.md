@@ -552,6 +552,52 @@ static int FindMini(int arr[]){
   return mini;
 }
 ```
+## Find the smallest number in the array
+```
+static int FindMin(int arr[], int i, int min){
+  if(i == arr.length){
+    return min;
+  }
+  if(min>arr[i]){
+    min = arr[i];
+  }
+  return FindMin(arr,i+1,min);
+}
+```
+<br />
+The code in the main function that drive the function.
+<br />
+
+```
+System.out.println("Finding the smallest number in the array");
+int smallest = arr[0];
+int min = FindMin(arr, 0, smallest);
+System.out.println("The smallest number in the array = "+min);
+```
+
+## Find the largest number in the array
+```
+static int FindMax(int arr[], int i, int max){
+  if(i == arr.length){
+    return max;
+  }
+  if(max<arr[i]){
+    max = arr[i];
+  }
+  return FindMax(arr,i+1,max);
+}
+```
+<br />
+The code in the main function that drive the function
+<br />
+
+```
+System.out.println("Find the largest number in the array using recursion");
+int largest = arr[0];
+int max = FindMax(arr,0,largest);
+System.out.println("The largest number in the array  = "+max);
+```
+
 ## Linear search
 Points to remember  
 * Time complexity O(n) Because there is only 1 for loop.
