@@ -1159,7 +1159,72 @@ public static void merge(int[] arr, int left, int mid, int right) {
   }
 }
 ```
+## Counting sort
+#### Time Complexity:
+- Best-case time complexity: O(n+k)
+- Average-case time complexity: O(n+k)
+- Worst-case time complexity: O(n+k)
+<br/>
 
+counting sort algorithm implementation functions -->
+<br/>
+
+max function will find the maximum element that is present in the array
+```
+static int max(int arr[], int i, int max_element){
+  if(i==arr.length){
+    return max_element;
+  }
+  if(max_element<arr[i]){
+    max_element=arr[i];
+  }
+  return max(arr,i+1,max_element);
+}
+```
+min function will find the minimum element present in the array
+```
+static int min(int arr[], int i , int min_element){
+  if(i==arr.length){
+    return min_element;
+  }
+  if(min_element>arr[i]){
+    min_element=arr[i];
+  }
+  return min(arr,i+1,min_element);
+}
+```
+finally the main counting sort function
+```
+static void countsort(int arr[]){
+  //if array is null or empty
+  if(arr==null||arr.length==0){
+    return;
+  }
+
+  //find the maximum and minimum element in the array
+  int max_element = max(arr,0,arr[0]);
+  int min_element = min(arr,0,arr[0]);
+
+  //create a CountArray that can keep track of number of occurances of elements in the array
+  int range = max_element-min_element+1;
+  int countArr[] = new int[range];
+
+  //caluclate the number of occurances of element in the array and then store it in the CountArray
+  for(int num : arr){
+    countArr[num-min_element]++;
+  }
+
+  //now reconstruc the main array using countSort array
+  int index = 0;
+  for(int i=0;i<range;i++){
+    while(countArr[i]>0){
+      arr[index] = i+min_element;
+      index++;
+      countArr[i]--;
+    }
+  }
+}
+```
 
 ## Frequency of a number in an array (Optimized version)
 ### Points to remember
