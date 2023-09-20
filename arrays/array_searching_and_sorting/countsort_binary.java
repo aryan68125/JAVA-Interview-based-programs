@@ -18,6 +18,7 @@ public class countsort_binary {
         }
         return min(arr,i+1,min_element);
     }
+    //for ascending order counting sort
     static void countsort(int arr[]){
         //if array is null or empty
         if(arr==null||arr.length==0){
@@ -47,6 +48,36 @@ public class countsort_binary {
             }
         }
     }
+    //for descending order counting sort
+//    static void countSortDescending(int arr[]) {
+//        // If the array is null or empty, return
+//        if (arr == null || arr.length == 0) {
+//            return;
+//        }
+//
+//        // Find the maximum and minimum elements in the array
+//        int max_element = max(arr, 0, arr[0]);
+//        int min_element = min(arr, 0, arr[0]);
+//
+//        // Create a CountArray that can keep track of the number of occurrences of elements in the array
+//        int range = max_element - min_element + 1;
+//        int countArr[] = new int[range];
+//
+//        // Calculate the number of occurrences of elements in the array and then store it in the CountArray
+//        for (int num : arr) {
+//            countArr[num - min_element]++;
+//        }
+//
+//        // Now reconstruct the main array using CountArray in descending order
+//        int index = arr.length - 1; // Start from the end of the main array
+//        for (int i = range - 1; i >= 0; i--) {
+//            while (countArr[i] > 0) {
+//                arr[index] = i + min_element;
+//                index--;
+//                countArr[i]--;
+//            }
+//        }
+//    }
     static void EnterElement(int arr[], int i){
         if(i==arr.length){
             return;
