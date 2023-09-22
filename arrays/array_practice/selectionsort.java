@@ -1,7 +1,7 @@
 import java.util.*;
-public class selectionsort{
+class selectionsort{
   static void EnterElement(int arr[], int i){
-    if(i == arr.length){
+    if(i==arr.length){
       return;
     }
     Scanner sc = new Scanner(System.in);
@@ -9,7 +9,7 @@ public class selectionsort{
     EnterElement(arr,i+1);
   }
   static void DisplayArray(int arr[], int i){
-    if(i == arr.length){
+    if(i==arr.length){
       return;
     }
     System.out.print(arr[i]+" ");
@@ -32,23 +32,22 @@ public class selectionsort{
   }
   public static void main(String args[]){
     Scanner sc = new Scanner(System.in);
-    System.out.println("Enter elements in the array");
+    System.out.println("Enter the size of the array");
     int size = sc.nextInt();
     int arr[] = new int[size];
 
-    System.out.println("Enter elements in the array");
+    System.out.println("Enter element in the array");
     EnterElement(arr,0);
 
     System.out.println("Display array");
     DisplayArray(arr,0);
     System.out.println("");
 
-    System.out.println("Performing selection sort on the array");
+    System.out.println("Performing selectionsort on the array");
     SelectionSort(arr,0);
 
-    System.out.println("Display array after performing selection sort on the array");
+    System.out.println("Display array after performing selection sort");
     DisplayArray(arr,0);
     System.out.println("");
-
   }
 }
